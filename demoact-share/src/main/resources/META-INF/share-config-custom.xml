@@ -11,10 +11,10 @@
 			</action> -->
 
 
-			<action id="OCRFolder" icon="ocr-icon" type="javascript"
-				label="OCRFolder">
+			<action id="EnglishOcr-Folder" icon="ocr-icon" type="javascript"
+				label="EnglishOcr-Folder">
 				<param name="function">onActionSimpleRepoAction</param>
-				<param name="action">OCR-Folder</param>
+				<param name="action">EnglishOcr-Folder</param>
 				<param name="successMessage">message.web-flag.enabled</param>
 				<param name="failureMessage">message.web-flag.failure</param>
 				<!-- <evaluator>evaluator.doclib.action.oEditMimetype</evaluator> -->
@@ -68,10 +68,10 @@
 			</actionGroup> -->
 
 			<actionGroup id="folder-browse">
-				<action index="410" id="OCRFolder" />
+				<action index="410" id="EnglishOcr-Folder" />
 			</actionGroup>
 			<actionGroup id="folder-details">
-				<action index="410" id="OCRFolder" />
+				<action index="410" id="EnglishOcr-Folder" />
 			</actionGroup>
 			
 			
