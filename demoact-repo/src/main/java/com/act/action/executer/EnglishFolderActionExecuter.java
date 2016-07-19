@@ -14,7 +14,7 @@ import com.eisenvault.ocrIntegration.OCRMethods;
 
 /**
  * 
- * Run OCR links on folders
+ * Run OCR links on folders---English-OCR Folder
  * @author Ankita Pandey
  * 
  */
@@ -24,47 +24,13 @@ public class EnglishFolderActionExecuter extends OCRMethods
 {
 
 	public static final String NAME = "EnglishOcr-Folder";
-	/*public static final String PARAM_ASPECT_NAME = "folder-name";*/
-	//private NodeService nodeService;
 	
-
-	/**
-	 * Set the node service
-	 *
-	 * @param nodeService  the node service
-	 */
-	/*public void setNodeService(NodeService nodeService)
-	{
-		this.nodeService = nodeService;
-	}
-*/
 	/**
 	 * @param ruleAction 
 	 * @see org.alfresco.repo.action.executer.ActionExecuterAbstractBase#executeImpl(Action, NodeRef)
 	 */
 		
-/*	public void executeImpl(Action ruleAction, NodeRef actionUponNodeRef)
-	{
-	    List<ChildAssociationRef> childAssociationRef = nodeService.getChildAssocs(actionUponNodeRef);
-	    
-	    int count = 0;
-	    //System.out.println("*****************************************" + nodeService.getChildAssocs(actionUponNodeRef));
-	    
-	    
-	    for (ChildAssociationRef childAssoc : childAssociationRef) 
-	    {
-	      
-	     // this.executeOCR(ruleAction, childAssoc.getChildRef(), NAME, "eng");
-		   
-	      System.out.println("******Child nodes inside are******"+ childAssoc.getChildRef());
-	      count++;
-	      System.out.println("******Total nodes count is******"+ count);
-	      
-	  
-	    }
-	    
-    }*/
-	
+
 	public void executeImpl(Action ruleAction, NodeRef actionUponNodeRef)
 	{
 	    ChildAssociationRef childAssociationRef = nodeService.getPrimaryParent(actionUponNodeRef);
@@ -74,7 +40,7 @@ public class EnglishFolderActionExecuter extends OCRMethods
 	
 	public void iterateThroughChildren( Action ruleAction,ChildAssociationRef childAssocRef)
 	{
-	    //System.out.println("****The folder is***** "+ childAssocRef);
+	    
 	    NodeRef childNodeRef = childAssocRef.getChildRef();
 	    List<ChildAssociationRef> children = nodeService.getChildAssocs(childNodeRef);
 
@@ -97,27 +63,7 @@ public class EnglishFolderActionExecuter extends OCRMethods
 	    }
 	}
 
-	/*public void iterateThroughFolder(Action ruleAction,ChildAssociationRef childAssocRef)
-	{
-	    //System.out.println("****The folder is***** "+ childAssocRef);
-	    NodeRef childNodeRef= childAssocRef.getChildRef();
-	    List<ChildAssociationRef> children = nodeService.getChildAssocs(childNodeRef);
-
-	    for (ChildAssociationRef childAssoc : children) 
-	    {
-	       ChildAssociationRef childAssociationRef = nodeService.getPrimaryParent(childNodeRef);	
-	      // EnglishOCRActionExecuter engocr = new EnglishOCRActionExecuter();
-	      NodeRef ref = new NodeRef("childAssociationRef");
-	       this.executeOCR(ruleAction, ref, NAME, "eng");
-		   //engocr.executeImpl(ruleAction, ref);
-	      // childAssoc.getChildRef();
-	      // Use childNodeRef here.
-	      System.out.println("******Documents inside are******"+ childAssoc);
-	      iterateThroughFolder(ruleAction,childAssoc);
-	     
-	    }
-	}*/
-
+	
 	/**
 	 * @see org.alfresco.repo.action.ParameterizedItemAbstractBase#addParameterDefinitions(java.util.List)
 	 */
