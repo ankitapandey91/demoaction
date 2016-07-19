@@ -2,22 +2,17 @@
 
 	<config evaluator="string-compare" condition="DocLibActions">
 		<actions>
-			<!-- <action id="DemoAction" icon="folder-edit-metadata" type="javascript"
-				label="DemoAction">
-				<param name="function">onActionSimpleRepoAction</param>
-				<param name="action">add-aspect</param>
-				<param name="successMessage">message.web-flag.enabled</param>
-				<param name="failureMessage">message.web-flag.failure</param>
-			</action> -->
+			
 
-
+	<!-- Adding folder actions for English,Hindi and Bengali OCRs -->
+	
 			<action id="EnglishOcr-Folder" icon="ocr-icon" type="javascript"
 				label="EnglishOcr-Folder">
 				<param name="function">onActionSimpleRepoAction</param>
 				<param name="action">EnglishOcr-Folder</param>
 				<param name="successMessage">message.web-flag.enabled</param>
 				<param name="failureMessage">message.web-flag.failure</param>
-				<!-- <evaluator>evaluator.doclib.action.oEditMimetype</evaluator> -->
+			
 			</action>
 			
 			<action id="HindiOcr-Folder" icon="ocr-icon" type="javascript"
@@ -26,7 +21,7 @@
 				<param name="action">HindiOcr-Folder</param>
 				<param name="successMessage">message.web-flag.enabled</param>
 				<param name="failureMessage">message.web-flag.failure</param>
-				<!-- <evaluator>evaluator.doclib.action.oEditMimetype</evaluator> -->
+				
 			</action>
 			
 			
@@ -36,36 +31,16 @@
 				<param name="action">BengaliOcr-Folder</param>
 				<param name="successMessage">message.web-flag.enabled</param>
 				<param name="failureMessage">message.web-flag.failure</param>
-				<!-- <evaluator>evaluator.doclib.action.oEditMimetype</evaluator> -->
+				
 			</action>
 			
-			<!-- <action id="ev-ocr-english" type="javascript" label="actions.ev.ocr-english"
-				icon="ocr-icon">
-
-
-				<param name="function">waitmessageDialog</param>
-				<permissions>
-					<permission allow="true">Write</permission>
-				</permissions>
-				<param name="action">English-OCR</param>
-				<param name="successMessage">message.ev.ocr-success</param>
-				<param name="failureMessage">message.ev.ocr-failure</param>
-				Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015
-
-				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
-
-			</action> -->
-
-
+			
+	<!-- Folder UI -->
+	
 		</actions>
 
 		<actionGroups>
-			<!-- <actionGroup id="folder-browse">
-				<action index="400" id="DemoAction" />
-			</actionGroup>
-			<actionGroup id="folder-details">
-				<action index="400" id="DemoAction" />
-			</actionGroup> -->
+		
 
 			<actionGroup id="folder-browse">
 				<action index="410" id="EnglishOcr-Folder" />
