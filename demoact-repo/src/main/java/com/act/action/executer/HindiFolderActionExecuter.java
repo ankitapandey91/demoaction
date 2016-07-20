@@ -41,7 +41,7 @@ public class HindiFolderActionExecuter extends OCRMethods
 	
 	public void iterateThroughChildren( Action ruleAction,ChildAssociationRef childAssocRef)
 	{
-	   
+	    //System.out.println("****The folder is***** "+ childAssocRef);
 	    NodeRef childNodeRef = childAssocRef.getChildRef();
 	    List<ChildAssociationRef> children = nodeService.getChildAssocs(childNodeRef);
 
@@ -64,7 +64,27 @@ public class HindiFolderActionExecuter extends OCRMethods
 	    }
 	}
 
-	
+	/*public void iterateThroughFolder(Action ruleAction,ChildAssociationRef childAssocRef)
+	{
+	    //System.out.println("****The folder is***** "+ childAssocRef);
+	    NodeRef childNodeRef= childAssocRef.getChildRef();
+	    List<ChildAssociationRef> children = nodeService.getChildAssocs(childNodeRef);
+
+	    for (ChildAssociationRef childAssoc : children) 
+	    {
+	       ChildAssociationRef childAssociationRef = nodeService.getPrimaryParent(childNodeRef);	
+	      // EnglishOCRActionExecuter engocr = new EnglishOCRActionExecuter();
+	      NodeRef ref = new NodeRef("childAssociationRef");
+	       this.executeOCR(ruleAction, ref, NAME, "eng");
+		   //engocr.executeImpl(ruleAction, ref);
+	      // childAssoc.getChildRef();
+	      // Use childNodeRef here.
+	      System.out.println("******Documents inside are******"+ childAssoc);
+	      iterateThroughFolder(ruleAction,childAssoc);
+	     
+	    }
+	}*/
+
 	/**
 	 * @see org.alfresco.repo.action.ParameterizedItemAbstractBase#addParameterDefinitions(java.util.List)
 	 */
