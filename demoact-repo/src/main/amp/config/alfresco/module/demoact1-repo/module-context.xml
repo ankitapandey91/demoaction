@@ -22,6 +22,8 @@
     <import resource="classpath:alfresco/module/${project.artifactId}/context/service-context.xml" />
     <import resource="classpath:alfresco/module/${project.artifactId}/context/bootstrap-context.xml" />
 	<import resource="classpath:alfresco/module/${project.artifactId}/context/webscript-context.xml" />
-	<import	resource="classpath:alfresco/module/${project.artifactId}/context/english-folder-context.xml" />
+	<import	resource="classpath:alfresco/module/${project.artifactId}/context/english-ocr-folder-context.xml" />
+	<import	resource="classpath:alfresco/module/${project.artifactId}/context/hindi-ocr-folder-context.xml" />
+	<import	resource="classpath:alfresco/module/${project.artifactId}/context/bengali-ocr-folder-context.xml" />
 
 </beans>
