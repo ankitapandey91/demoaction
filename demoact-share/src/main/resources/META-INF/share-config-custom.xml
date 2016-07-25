@@ -1,12 +1,13 @@
 <alfresco-config>
 
+			
 	<config evaluator="string-compare" condition="DocLibActions">
 		<actions>
-			
+				
 
 	<!-- Adding folder actions for English,Hindi and Bengali OCRs -->
 	
-			<action id="EnglishOcr-Folder" icon="ocr-icon" type="javascript"
+			<action id="EnglishOcr-Folder" icon="OCR_Icon" type="javascript"
 				label="EnglishOcr-Folder">
 				<param name="function">onActionSimpleRepoAction</param>
 				<param name="action">EnglishOcr-Folder</param>
@@ -15,7 +16,7 @@
 			
 			</action>
 			
-			<action id="HindiOcr-Folder" icon="ocr-icon" type="javascript"
+			<action id="HindiOcr-Folder" icon="OCR_Icon" type="javascript"
 				label="HindiOcr-Folder">
 				<param name="function">onActionSimpleRepoAction</param>
 				<param name="action">HindiOcr-Folder</param>
@@ -25,7 +26,7 @@
 			</action>
 			
 			
-			<action id="BengaliOcr-Folder" icon="ocr-icon" type="javascript"
+			<action id="BengaliOcr-Folder" icon="OCR_Icon" type="javascript"
 				label="BengaliOcr-Folder">
 				<param name="function">onActionSimpleRepoAction</param>
 				<param name="action">BengaliOcr-Folder</param>
